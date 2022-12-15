@@ -38,13 +38,15 @@
         }
        #form1{
         border: 1px solid black;
+        display: flex;
+        flex-direction: column;
         height: 550px;
         width: 500px;
         background-color: white;
         position: absolute;
         top: 20px;
         right: 50px;
-        display: none;
+        /* display: none; */
        }
        #form1 input{
         height: 30px;
@@ -82,7 +84,7 @@
 
 
     <div id="container">
-        <form action="" id="form1">
+        <!-- <form action="" id="form1">
             <label for="cover1"></label>
             <input type="text" placeholder="enter book cover image url" id="cover1">
             <label for="bookname1"></label>
@@ -107,7 +109,7 @@
             <input type="number" placeholder="enter cost here" id="cost1">
             <input type="submit" value="Edit">
     
-        </form>
+        </form> -->
 
         <table>
             <thead>
@@ -118,6 +120,7 @@
                     <td>Genre</td>
                     <td>Edition</td>
                     <td>Publisher</td>
+                    <td>Borrowed</td>
                     <td>Cost</td>
                     <td>Edit</td>
                     <td>Delete</td>

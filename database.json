@@ -1,15 +1,15 @@
 {
   "books": [
     {
-      "image_url": "https://media.digikey.com/Photos/McGraw-Hill%20Education/MFG_1259644251.jpg",
+      "image_url": "https://media.digikey.com/Photos/McGraw-Hill%20Education/1260143244.jpg",
       "book_name": "The Big Book of Makerspace Projects",
-      "author": "Colleen Graves, Aaron Graves",
-      "genre": "Science",
+      "author": "\t Simon Monk",
+      "genre": "Business",
       "edition": "2020",
       "publisher": "\t McGraw-Hill Education",
-      "cost": "1309",
+      "cost": "1234",
       "borrowed": false,
-      "id": 2
+      "id": 1
     }
   ]
 }
