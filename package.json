@@ -1,0 +1,23 @@
+{
+  "name": "test_assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"json-server --watch database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarshakhatua/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adarshakhatua/test/issues"
+  },
+  "homepage": "https://github.com/adarshakhatua/test#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
