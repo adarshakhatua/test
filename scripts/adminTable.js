@@ -64,8 +64,8 @@ function displayData(data){
 
         td8.style.cursor="pointer";
         td9.style.cursor="pointer";
-        td8.addEventListener("click",()=>{createForm(ele.id)})
-        td9.addEventListener("click",()=>{deleteData(ele.id)})
+        td9.addEventListener("click",()=>{createForm(ele.id)})
+        td10.addEventListener("click",()=>{deleteData(ele.id)})
         td1.append(image);
         tr.append(td1,td2,td3,td4,td5,td6,td7,td8,td9,td10);
         tbody.append(tr);
@@ -103,6 +103,7 @@ function editData(index){
 }
 
 function createForm(index){
+    document.querySelector("body").style.backgroundColor="gray";
     let div=document.createElement("div");
     let input1=document.createElement("input");
     let input2=document.createElement("input");
@@ -163,7 +164,7 @@ function createForm(index){
 
 
     button1.addEventListener("click",()=>{editData(index)});
-    button2.addEventListener("click",()=>{div.style.display="none"})
+    button2.addEventListener("click",()=>{div.style.display="none";document.querySelector("body").style.backgroundColor="white";})
 
     select1.append(option1,option2,option3,option4,option5,option6);
     select2.append(option7,option8,option9,option10);

@@ -1,15 +1,25 @@
 {
-  "books": [
-    {
-      "image_url": "https://media.digikey.com/Photos/McGraw-Hill%20Education/1260143244.jpg",
-      "book_name": "The Big Book of Makerspace Projects",
-      "author": "\t Simon Monk",
-      "genre": "Business",
-      "edition": "2020",
-      "publisher": "\t McGraw-Hill Education",
-      "cost": "1234",
-      "borrowed": false,
-      "id": 1
-    }
-  ]
+  "books": [{
+    "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
+    "book_name": "Harry Potter and the Philosopher's Stone",
+    "author": "J. K. Rowling",
+		"genre": "Fiction",
+		"edition": "2021",
+		"publisher": "Bloomsbury",
+		"cost": 1299,
+		"borrowed": false,
+    "id":1
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
+    "book_name": "Harry Potter and the Philosopher's Stone",
+    "author": "J. K. Rowling",
+		"genre": "Science",
+		"edition": "2021",
+		"publisher": "Bloomsbury",
+		"cost": 1199,
+		"borrowed": false
+  }
+
+]
 }
