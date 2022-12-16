@@ -17,7 +17,7 @@ function submitData(event){
         cost: form.cost.value,
         borrowed: false,
     }
-    fetch(" http://localhost:3000/books",{
+    fetch(" https://book-library-hftd.onrender.com/books",{
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -28,7 +28,7 @@ function submitData(event){
 }
 
 function fetchData(){
-    fetch("http://localhost:3000/books").then((val)=>val.json()).then((res)=>{displayData(res);console.log(res);}).catch((err)=>{console.log(err)});
+    fetch("https://book-library-hftd.onrender.com/books").then((val)=>val.json()).then((res)=>{displayData(res);console.log(res);}).catch((err)=>{console.log(err)});
 }
 fetchData();
 
@@ -74,7 +74,7 @@ function displayData(data){
 
 
 function deleteData(index){
-    fetch(`http://localhost:3000/books/${index}`,{
+    fetch(`https://book-library-hftd.onrender.com/books/${index}`,{
         method: 'DELETE',
     }).then((val)=>val.json()).then((res)=>{console.log(res);fetchData()}).catch((err)=>{console.log(err)});
 }
@@ -91,8 +91,8 @@ function editData(index){
         borrowed: false,
    }
    console.log(data);
-   
-    fetch(`http://localhost:3000/books/${index}`,{
+
+    fetch(`https://book-library-hftd.onrender.com/books/${index}`,{
         method: 'PUT',
         headers: {
             'Accept': 'application/json',

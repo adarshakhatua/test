@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/books").then((val)=>val.json()).then((res)=>{console.log(res);displayData(res)}).catch((err)=>{console.log(err)});
+fetch("https://book-library-hftd.onrender.com/books").then((val)=>val.json()).then((res)=>{console.log(res);displayData(res)}).catch((err)=>{console.log(err)});
 
 function displayData(data){
    let container= document.getElementById("container");
@@ -26,7 +26,7 @@ function displayData(data){
         btn.style.backgroundColor=ele.borrowed?"red":"green";
         btn.style.color="white";
         btn.disabled=ele.borrowed?true:false;
-        btn.addEventListener("click",()=>{createModal(ele)});
+        btn.addEventListener("click",()=>{createModal(ele);});
 
         card.append(img,name,author,edition,genre,publiser,cost,btn);
         container.append(card)
@@ -36,34 +36,34 @@ function displayData(data){
 document.getElementById("filter").addEventListener("change",()=>{
     let data=document.getElementById("filter").value;
     if(data){
-        fetch(`http://localhost:3000/books?genre=${data}`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)});
+        fetch(`https://book-library-hftd.onrender.com/books?genre=${data}`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)});
     }
     else{
-        fetch(`http://localhost:3000/books`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)}); 
+        fetch(`https://book-library-hftd.onrender.com/books`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)}); 
     }  
 })
 
 document.getElementById("sort").addEventListener("change",()=>{
     let data=document.getElementById("sort").value;
     if(data){
-        fetch(`http://localhost:3000/books?_sort=cost&_order=${data}`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)});
+        fetch(`https://book-library-hftd.onrender.com/books?_sort=cost&_order=${data}`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)});
     }
     else{
-        fetch(`http://localhost:3000/books`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)});
+        fetch(`https://book-library-hftd.onrender.com/books`).then((val)=>val.json()).then((res)=>{displayData(res)}).catch((err)=>{console.log(err)});
     }
     
 })
 
 function borrowBook(ele){
    //console.log(index)
-   fetch(`http://localhost:3000/books/${ele.id}`,{
+   fetch(`https://book-library-hftd.onrender.com/books/${ele.id}`,{
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({...ele,borrowed:true})
-    }).then((val)=>val.json()).then((res)=>{console.log(res);alert("book successfully borrowed!");fetchData()}).catch((err)=>{console.log(err)});
+    }).then((val)=>val.json()).then((res)=>{console.log(res);alert("book successfully borrowed!");fetch("https://book-library-hftd.onrender.com/books").then((val)=>val.json()).then((res)=>{console.log(res);displayData(res)}).catch((err)=>{console.log(err)});}).catch((err)=>{console.log(err)});
 }
 
 function createModal(ele){
