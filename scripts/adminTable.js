@@ -91,7 +91,7 @@ function editData(index){
         borrowed: false,
    }
    console.log(data);
-    let bookData=
+   
     fetch(`http://localhost:3000/books/${index}`,{
         method: 'PUT',
         headers: {

@@ -1,25 +1,26 @@
 {
-  "books": [{
-    "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
-    "book_name": "Harry Potter and the Philosopher's Stone",
-    "author": "J. K. Rowling",
-		"genre": "Fiction",
-		"edition": "2021",
-		"publisher": "Bloomsbury",
-		"cost": 1299,
-		"borrowed": false,
-    "id":1
-  },
-  {
-    "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
-    "book_name": "Harry Potter and the Philosopher's Stone",
-    "author": "J. K. Rowling",
-		"genre": "Science",
-		"edition": "2021",
-		"publisher": "Bloomsbury",
-		"cost": 1199,
-		"borrowed": false
-  }
-
-]
+  "books": [
+    {
+      "image_url": "https://media.digikey.com/Photos/McGraw-Hill%20Education/1260143244.jpg",
+      "book_name": "Digi-Key Part Number",
+      "author": "Abhishek Pandey",
+      "genre": "Science",
+      "edition": "2022",
+      "publisher": "\t McGraw-Hill Education",
+      "cost": "5000",
+      "borrowed": true,
+      "id": 1
+    },
+    {
+      "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
+      "book_name": "Harry Potter and the Philosopher's Stone",
+      "author": "J. K. Rowling",
+      "genre": "Science",
+      "edition": "2021",
+      "publisher": "Bloomsbury",
+      "cost": 1199,
+      "borrowed": false,
+      "id": 2
+    }
+  ]
 }
