@@ -3,6 +3,7 @@ fetch("https://book-library-hftd.onrender.com/books").then((val)=>val.json()).th
 function displayData(data){
    let container= document.getElementById("container");
    container.innerHTML=null;
+   document.querySelector("body").style.backgroundColor="white";
     data.forEach((ele,index)=>{
         let card=document.createElement("div");
         card.id="card"
@@ -63,7 +64,11 @@ function borrowBook(ele){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({...ele,borrowed:true})
-    }).then((val)=>val.json()).then((res)=>{console.log(res);alert("book successfully borrowed!");fetch("https://book-library-hftd.onrender.com/books").then((val)=>val.json()).then((res)=>{console.log(res);displayData(res)}).catch((err)=>{console.log(err)});}).catch((err)=>{console.log(err)});
+    }).then((val)=>val.json()).then((res)=>{
+        console.log(res);
+        alert("book successfully borrowed!");
+        fetch("https://book-library-hftd.onrender.com/books").then((val)=>val.json()).then((res)=>{console.log(res);displayData(res)}).catch((err)=>{console.log(err)});
+    }).catch((err)=>{console.log(err)});
 }
 
 function createModal(ele){
